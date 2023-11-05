@@ -1,0 +1,53 @@
+{
+	"layer": "top",
+	"modules-left": ["hyprland/workspaces"],
+	"modules-right": ["battery", "wireplumber", "cpu", "temperature", "network", "clock"],
+	"battery": {
+		"format": "{capacity}% {icon}",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"wireplumber": {
+		"format": "Vol: {volume}%",
+		"format-muted": "MUTE",
+	},
+	"cpu": {
+		"interval": 1,
+		"format": "CPU: {load}",
+	},
+	"temperature": {
+	    "thermal-zone": 1,
+	    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+	    // "critical-threshold": 80,
+	    // "format-critical": "{temperatureC}°C ",
+	    "format": "{temperatureC}°C "
+	},
+	"network": {
+		"interface": "wlp2s0",
+		"interval": 1,
+		"format": "wlp2s0:{signalStrength}%. Down:{bandwidthDownBits}, UP:{bandwidthUpBits}"
+	},
+	"clock": {
+		"format": "{:%a, %d. %b - %R}"
+	},
+	"hyprland/workspaces": {
+		"persistent_workspaces": {
+			"*": 10, // 10 workspaces by default on every monitor
+		},
+		"format": "{icon}",
+		"format-icons": {
+			 "1": "1",
+			 "2": "2",
+			 "3": "3",
+			 "4": "4",
+			 "5": "5",
+			 "6": "6",
+			 "7": "7",
+			 "8": "8",
+			 "9": "9",
+			 "10": "10",
+			"active": "",
+		},
+		"on-click": "{activate}",
+		"sort-by-number": true,
+	}
+}
